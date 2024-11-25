@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/crossplane-contrib/provider-kafka/apis/topic/v1alpha1"
-	"github.com/crossplane-contrib/provider-kafka/internal/clients/kafka"
+	"github.com/Facets-cloud/provider-kafka/apis/topic/v1alpha1"
+	"github.com/Facets-cloud/provider-kafka/internal/clients/kafka"
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/twmb/franz-go/pkg/kadm"

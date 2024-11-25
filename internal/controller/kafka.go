@@ -20,9 +20,9 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/controller"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	"github.com/crossplane-contrib/provider-kafka/internal/controller/acl"
-	"github.com/crossplane-contrib/provider-kafka/internal/controller/config"
-	"github.com/crossplane-contrib/provider-kafka/internal/controller/topic"
+	"github.com/Facets-cloud/provider-kafka/internal/controller/acl"
+	"github.com/Facets-cloud/provider-kafka/internal/controller/config"
+	"github.com/Facets-cloud/provider-kafka/internal/controller/topic"
 )
 
 // Setup creates all Template controllers with the supplied logger and adds them to

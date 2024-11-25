@@ -1,4 +1,4 @@
-module github.com/crossplane-contrib/provider-kafka
+module github.com/Facets-cloud/provider-kafka
 
 go 1.21
 

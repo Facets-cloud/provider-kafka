@@ -20,8 +20,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/crossplane-contrib/provider-kafka/internal/clients/kafka"
-	"github.com/crossplane-contrib/provider-kafka/internal/clients/kafka/acl"
+	"github.com/Facets-cloud/provider-kafka/internal/clients/kafka"
+	"github.com/Facets-cloud/provider-kafka/internal/clients/kafka/acl"
 
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	"github.com/crossplane/crossplane-runtime/pkg/controller"
@@ -39,8 +39,8 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/reconciler/managed"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/crossplane-contrib/provider-kafka/apis/acl/v1alpha1"
-	apisv1alpha1 "github.com/crossplane-contrib/provider-kafka/apis/v1alpha1"
+	"github.com/Facets-cloud/provider-kafka/apis/acl/v1alpha1"
+	apisv1alpha1 "github.com/Facets-cloud/provider-kafka/apis/v1alpha1"
 )
 
 const (

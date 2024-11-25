@@ -2,7 +2,7 @@
 # Setup Project
 
 PROJECT_NAME := provider-kafka
-PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
+PROJECT_REPO := github.com/Facets-cloud/$(PROJECT_NAME)
 
 PLATFORMS ?= linux_amd64 linux_arm64
 
@@ -62,10 +62,10 @@ IMAGES = provider-kafka
 # ====================================================================================
 # Setup XPKG
 
-XPKG_REG_ORGS ?= xpkg.upbound.io/crossplane-contrib index.docker.io/crossplanecontrib
+XPKG_REG_ORGS ?= xpkg.upbound.io/Facets-cloud index.docker.io/crossplanecontrib
 # NOTE(hasheddan): skip promoting on xpkg.upbound.io as channel tags are
 # inferred.
-XPKG_REG_ORGS_NO_PROMOTE ?= xpkg.upbound.io/crossplane-contrib
+XPKG_REG_ORGS_NO_PROMOTE ?= xpkg.upbound.io/Facets-cloud
 XPKGS = provider-kafka
 -include build/makelib/xpkg.mk
 

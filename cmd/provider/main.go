@@ -32,8 +32,8 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 	"github.com/crossplane/crossplane-runtime/pkg/ratelimiter"
 
-	"github.com/crossplane-contrib/provider-kafka/apis"
-	kafkacontroller "github.com/crossplane-contrib/provider-kafka/internal/controller"
+	"github.com/Facets-cloud/provider-kafka/apis"
+	kafkacontroller "github.com/Facets-cloud/provider-kafka/internal/controller"
 )
 
 func main() {
