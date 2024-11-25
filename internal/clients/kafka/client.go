@@ -43,6 +43,11 @@ func NewAdminClient(ctx context.Context, data []byte, kube client.Client) (*kadm
 		return nil, errors.Wrap(err, errCannotParse)
 	}
 
+	// Parse broker URLs for SASL_SSL if present
+	for _, broker := range kc.Brokers {
+		kc.ParseBrokerURL(broker)
+	}
+
 	opts := []kgo.Opt{
 		kgo.SeedBrokers(kc.Brokers...),
 		kgo.WithLogger(kgo.BasicLogger(os.Stdout, kgo.LogLevelWarn, nil)),

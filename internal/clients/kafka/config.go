@@ -1,5 +1,7 @@
 package kafka
 
+import "strings"
+
 // Config is a Kafka client configuration
 type Config struct {
 	Brokers []string `json:"brokers"`
@@ -26,4 +28,30 @@ type ClientCertificateSecretRef struct {
 	Namespace string `json:"namespace"`
 	KeyField  string `json:"keyField,omitempty"`
 	CertField string `json:"certField,omitempty"`
+}
+
+// ParseBrokerURL parses a Confluent-style broker URL (e.g., sasl_ssl://host:port)
+// and configures the appropriate SASL and TLS settings
+func (c *Config) ParseBrokerURL(url string) {
+	if strings.HasPrefix(url, "sasl_ssl://") {
+		// Strip the protocol prefix
+		broker := strings.TrimPrefix(url, "sasl_ssl://")
+		
+		// Update brokers list with the cleaned URL
+		c.Brokers = []string{broker}
+		
+		// Enable TLS since it's a SASL_SSL URL
+		if c.TLS == nil {
+			c.TLS = &TLS{
+				InsecureSkipVerify: false,
+			}
+		}
+		
+		// Ensure SASL is initialized
+		if c.SASL == nil {
+			c.SASL = &SASL{
+				Mechanism: "PLAIN", // Default to PLAIN mechanism
+			}
+		}
+	}
 }
